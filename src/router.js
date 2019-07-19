@@ -18,7 +18,6 @@ export default new Router({
       path: '/chuck',
       name: 'chuck-app',
       component: ChuckNorris
-    }
-    
+    },    
   ]
 })
