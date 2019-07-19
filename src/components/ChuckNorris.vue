@@ -1,6 +1,10 @@
 <template>
   <div>
     <p>{{ joke }}</p>
+    <div>
+      <input type="text" placeholder="Enter Joke category..." v-model="category"/>
+      <button @click="handleCategory">Get New Joke</button>
+    </div>
   </div>
 </template>
 
@@ -9,10 +13,22 @@ import { mapGetters, mapActions } from "vuex";
 import store from './../store'
 
 export default {
+  data () {
+    return {
+      category : ''
+    }
+  },
+
   methods: {
     ...mapActions('ChuckModule',{
-      getJoke: "/getRandomJoke"
-    })
+      getJoke: "/getRandomJoke",
+      getCategoryJoke: "getCategoryJoke"
+    }),
+
+    handleCategory(category) {
+      category = this.category
+      this.getCategoryJoke(category)
+    }
   },
 
   computed: {

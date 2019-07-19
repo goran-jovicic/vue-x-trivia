@@ -2,6 +2,7 @@
   <div id="app">
     <nav class="navbar-brand">
       <router-link to="/">Trivia App</router-link> |
+      <router-link to="/chuck">Chuck</router-link>
     </nav>
     <router-view/>
   </div>

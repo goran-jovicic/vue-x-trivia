@@ -8,6 +8,10 @@ export default class ChuckService {
     getRandomJoke() {
         return this.client.getRandomJoke()
     }
+
+    getNewJoke(category) {
+        return this.client.getRandomJoke(category)
+    }
 }
 
 export const chuckService = new ChuckService()

@@ -17,6 +17,12 @@ export const ChuckModule = {
           context.commit('setJoke', joke.value)
           next()
         })
+    },
+    getCategoryJoke(context,category){
+      return chuckService.getNewJoke(category)
+      .then((joke) => {
+        context.commit('setJoke', joke.value)
+      })
     }
   },
   getters: {
