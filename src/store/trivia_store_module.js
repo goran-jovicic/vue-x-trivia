@@ -1,4 +1,5 @@
 export const TriviaModule = {
+    namespaced: true,
     state: {
     },
     mutations: {
@@ -6,5 +7,5 @@ export const TriviaModule = {
     actions: {
     },
     getters: {
-      }
     }
+}
